@@ -2,6 +2,7 @@ language: java
 jdk:
   - oraclejdk8
 services:
+  - docker
   - mongodb
   - redis
   - cassandra
@@ -10,5 +11,5 @@ cache:
   directories:
     - $HOME/.m2
 install: true
-before_script: travis_wait 45 ./mvnw install -T 2.0C -q -U -DskipTests=true -Pfast -Dmaven.test.redirectTestOutputToFile=true
-script: ./mvnw install -T 2.0C -q -nsu -Dmaven.test.redirectTestOutputToFile=true -P '!integration'
+
+script: ./gv-build.sh

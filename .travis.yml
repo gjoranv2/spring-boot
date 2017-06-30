@@ -11,4 +11,8 @@ cache:
     - $HOME/.m2
 install: true
 
-script: travis_wait 45 ./gv-build.sh
+# script: travis_wait 45 ./gv-build.sh
+
+-before_script: travis_wait 45 ./mvnw install -q -U -DskipTests=true -Pfast -Dmaven.test.redirectTestOutputToFile=true
+
+-script: ./mvnw install -q -nsu -Dmaven.test.redirectTestOutputToFile=true -P '!integration'

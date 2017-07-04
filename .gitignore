@@ -4,6 +4,7 @@
 *#
 *~
 /build
+spring-boot-tools/spring-boot-gradle-plugin/build/
 /code
 .classpath
 .project
@@ -12,7 +13,6 @@
 .factorypath
 .recommenders
 bin
-build
 lib/
 target
 .factorypath

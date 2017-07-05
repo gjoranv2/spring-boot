@@ -10,15 +10,17 @@ fi
 df -h
 df -h .
 
-SOURCE_DIR=~/spring-boot
+#SOURCE_DIR=~/spring-boot
 NUM_CORES=$(nproc --all)
 
-mkdir "${SOURCE_DIR}"
-git clone --no-hardlinks /spring-boot "${SOURCE_DIR}"
+#mkdir "${SOURCE_DIR}"
+#git clone --no-hardlinks /spring-boot "${SOURCE_DIR}"
 
-cd "${SOURCE_DIR}"
+#cd "${SOURCE_DIR}"
 
 pwd
+ls -l
+
 time ./mvnw install -U -DskipTests=true -Pfast -Dmaven.test.redirectTestOutputToFile=true
 time ./mvnw install -q -nsu -Dmaven.test.redirectTestOutputToFile=true -P '!integration'
 

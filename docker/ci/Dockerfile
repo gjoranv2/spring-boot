@@ -4,9 +4,9 @@ FROM vespabuild
 COPY tmp/vespa.spec /vespa.spec
 RUN yum-builddep -y /vespa.spec
 
-RUN useradd --create-home -s /bin/bash vespabuilder
-WORKDIR /home/vespabuilder
-USER vespabuilder
+#RUN useradd --create-home -s /bin/bash vespabuilder
+#WORKDIR /home/vespabuilder
+#USER vespabuilder
 
 ENV LANG en_US.UTF-8
 

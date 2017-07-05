@@ -29,4 +29,7 @@ docker build -t "$CI_DOCKER_IMAGE" -f ci/Dockerfile .
 
 docker run --rm -v ${DIR}/..:/spring-boot --entrypoint /vespa-ci-internal.sh "$CI_DOCKER_IMAGE" \
    2>&1 | tee vespa-ci-$(date +%Y-%m-%dT%H:%M:%S%z).log
-echo "Error code from docker run: $?"
+
+# Becuase of piping docker run to tee above
+exit ${PIPESTATUS[0]}
+

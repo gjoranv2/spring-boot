@@ -10,6 +10,8 @@ fi
 df -h
 df -h .
 
-time ./mvnw install -q -U -DskipTests=true -Pfast -Dmaven.test.redirectTestOutputToFile=true
+#time ./mvnw install -q -U -DskipTests=true -Pfast -Dmaven.test.redirectTestOutputToFile=true
+#time ./mvnw install -q -nsu -Dmaven.test.redirectTestOutputToFile=true -P '!integration'
 
-time ./mvnw install -q -nsu -Dmaven.test.redirectTestOutputToFile=true -P '!integration'
+time mvn install -q -U -DskipTests=true -Pfast -Dmaven.test.redirectTestOutputToFile=true
+time mvn install -q -nsu -Dmaven.test.redirectTestOutputToFile=true -P '!integration'

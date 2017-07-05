@@ -24,7 +24,7 @@ pwd
 ls -l
 
 time ./mvnw install -q -U -DskipTests=true -Pfast -Dmaven.test.redirectTestOutputToFile=true
-time ./mvnw install -T 2.0C -q -nsu -Dmaven.test.redirectTestOutputToFile=true -P '!integration'
+time ./mvnw install -q -nsu -Dmaven.test.redirectTestOutputToFile=true -P '!integration'
 
 #MAVEN_OPTS="-Xms128m -Xmx512m" mvn install -Dmaven.test.redirectTestOutputToFile=true
 #time mvn install -q -U -DskipTests=true -Pfast -Dmaven.test.redirectTestOutputToFile=true

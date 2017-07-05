@@ -18,6 +18,8 @@ NUM_CORES=$(nproc --all)
 
 #cd "${SOURCE_DIR}"
 
+whoami
+cd spring-boot
 pwd
 ls -l
 

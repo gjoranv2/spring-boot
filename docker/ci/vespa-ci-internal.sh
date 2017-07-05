@@ -23,6 +23,8 @@ cd spring-boot
 pwd
 ls -l
 
+exit 12
+
 time ./mvnw install -q -U -DskipTests=true -Pfast -Dmaven.test.redirectTestOutputToFile=true
 time ./mvnw install -q -nsu -Dmaven.test.redirectTestOutputToFile=true -P '!integration'
 

@@ -16,11 +16,11 @@ NUM_CORES=$(nproc --all)
 whoami
 
 mkdir "${SOURCE_DIR}"
-cp -r /spring-boot/* "${SOURCE_DIR}"/
+cp -r /spring-boot/. "${SOURCE_DIR}"
 
 cd "${SOURCE_DIR}"
 pwd
-ls -l
+ls -la
 
 time ./mvnw install -q -U -DskipTests=true -Pfast -Dmaven.test.redirectTestOutputToFile=true
 time ./mvnw install -T 2.0C -q -nsu -Dmaven.test.redirectTestOutputToFile=true -P '!integration'

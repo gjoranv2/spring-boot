@@ -33,6 +33,7 @@
 #       set MAVEN_OPTS=-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=8000
 #   MAVEN_SKIP_RC - flag to disable loading of mavenrc files
 # ----------------------------------------------------------------------------
+set -x
 
 if [ -z "$MAVEN_SKIP_RC" ] ; then
 
@@ -225,6 +226,8 @@ MAVEN_CMD_LINE_ARGS="$MAVEN_CONFIG $@"
 export MAVEN_CMD_LINE_ARGS
 
 WRAPPER_LAUNCHER=org.apache.maven.wrapper.MavenWrapperMain
+
+ls -la $MAVEN_PROJECTBASEDIR/.mvn/wrapper/
 
 exec "$JAVACMD" \
   $MAVEN_OPTS \

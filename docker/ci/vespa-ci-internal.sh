@@ -10,16 +10,15 @@ fi
 df -h
 df -h .
 
-#SOURCE_DIR=~/spring-boot
+SOURCE_DIR=~/spring-boot
 NUM_CORES=$(nproc --all)
 
-#mkdir "${SOURCE_DIR}"
-#git clone --no-hardlinks /spring-boot "${SOURCE_DIR}"
-
-#cd "${SOURCE_DIR}"
-
 whoami
-cd spring-boot
+
+mkdir "${SOURCE_DIR}"
+cp -r /spring-boot/* "${SOURCE_DIR}"/
+
+cd "${SOURCE_DIR}"
 pwd
 ls -l
 
